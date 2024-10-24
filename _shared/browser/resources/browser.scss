@@ -1,0 +1,502 @@
+@import '../../../../resources/sass/variables.scss';
+
+$intro-color     : darken(#1e88e5, 10);
+$body-color      : #f3f3f3;
+$dark-body-color : darken($body-color, 50);
+
+// Stockholm
+:root {
+    --blue        : #0076f8;
+    --darker-blue : #1c4c94;
+}
+
+.b-theme-material {
+    --blue        : #0076f8;
+    --darker-blue : #176ab3;
+}
+
+.b-theme-classic {
+    --blue        : #0076f8;
+    --darker-blue : #176ab3;
+}
+
+.b-theme-classic-light {
+    --blue        : #3191f7;
+    --darker-blue : #3482c2;
+}
+
+.b-theme-classic-dark {
+    --blue        : #1b2c80;
+    --darker-blue : #0d48a1;
+}
+
+body,
+#browser {
+    background : $body-color;
+}
+
+body.b-theme-classic-dark {
+    // Keeps scrollbar matching
+    color-scheme : dark;
+
+    &,
+    #browser,
+    .group-header {
+        background : #252528;
+    }
+
+    .group-header,
+    .example .title {
+        color : #ccc;
+    }
+
+    #intro #live-example,
+    .example .image {
+        background : #44444a;
+    }
+
+    .example img {
+        background : transparent;
+    }
+
+}
+
+#container .b-toolbar {
+    flex          : none !important;
+    box-shadow    : 0 0 10px rgba(0, 0, 0, .15);
+    z-index       : 20;
+    border-bottom : none;
+
+    .b-toolbar-content {
+        padding-block : 0;
+
+        > .b-widget {
+            margin-block : .5em;
+        }
+    }
+}
+
+.framework-selector {
+    font-size : 1em;
+}
+
+.b-button.framework-tab {
+    border        : 1px solid transparent;
+    border-radius : 2px !important;
+    background    : transparent;
+    width         : 4em;
+    padding       : 0;
+
+    &.b-pressed {
+        border : 1px solid rgba(var(--widget-primary-color-rgb), var(--button-border-opacity));
+    }
+
+    &:not(.b-pressed) {
+        i {
+            filter  : grayscale(70%);
+            opacity : 0.7;
+        }
+
+        &:hover {
+            background-color : transparent !important;
+            border-color     : transparent !important;
+
+            i {
+                filter : none;
+            }
+        }
+    }
+
+    i {
+        background-size     : contain;
+        background-position : center;
+        background-repeat   : no-repeat;
+        width               : 2.2em;
+        height              : 2.2em;
+        opacity             : 1;
+        transition          : filter 0.2s, opacity 0.2s;
+
+        &.js {
+            background-image : url(logo/js.svg);
+        }
+
+        &.react {
+            background-image : url(logo/react.svg);
+        }
+
+        &.vue {
+            background-image : url(logo/vue.svg);
+        }
+
+        &.angular {
+            background-image : url(logo/angular.svg);
+        }
+    }
+}
+
+.b-watermark {
+    display : none;
+}
+
+#browser {
+    flex                       : 1;
+    -webkit-overflow-scrolling : touch;
+    overflow-y                 : scroll;
+    overflow-x                 : clip;
+}
+
+.group-header {
+    position         : sticky;
+    top              : 0;
+    background-color : $body-color;
+    z-index          : 1;
+    padding          : 1em 0.8em;
+    border-bottom    : 2px solid var(--blue);
+    display          : flex;
+    align-items      : center;
+
+    a {
+        position         : absolute;
+        inset-inline-end : 0;
+        font-size        : .7em;
+        color            : #888;
+        font-weight      : 400;
+
+        i {
+            margin-inline-end : .2em;
+        }
+    }
+}
+
+.tip-folder {
+    margin-top : .5em;
+
+    i {
+        margin-inline-end : .2em;
+    }
+}
+
+a {
+    text-decoration : none;
+}
+
+p:first-child {
+    margin-top : 0;
+}
+
+p:last-child {
+    margin-bottom : 0;
+}
+
+#scroller {
+    padding               : 0 2em 2em 2em;
+    display               : grid;
+    grid-template-columns : repeat(auto-fit, minmax(384px, 1fr));
+    grid-gap              : 2em;
+
+    h2 {
+        grid-column : 1 / -1;
+        margin      : 0;
+        font-size   : 1.7em;
+    }
+}
+
+.example {
+    border            : 2px dotted transparent;
+    max-width         : 512px;
+    cursor            : pointer;
+    position          : relative;
+    scroll-margin-top : 5em;
+
+    // Ensure examples fit in width when the default max-width of 512 above is too wide.
+    // This rule is based on the 2em inline padding of #scroller.
+    @media (max-width : calc(512px - 4em)) {
+        max-width : calc(100vw - 4em);
+    }
+
+    &.updated .text:after,
+    &.new .text:after {
+        position            : relative;
+        top                 : -.2em;
+        content             : 'new';
+        display             : inline-block;
+        color               : #fff;
+        margin-inline-start : .5em;
+        padding             : 0.2em 0.4em 0.3em 0.4em;
+        background          : #ff5722;
+        border-radius       : .2em;
+        font-size           : .7em;
+    }
+
+    &.updated .text:after {
+        content : 'updated';
+    }
+
+    .image {
+        transition       : all 0.2s;
+        background-color : #fff;
+        border-radius    : 3px;
+        display          : flex;
+        flex-flow        : column nowrap;
+
+        // TODO: Remove when Safari supports aspect-ratio
+        .b-safari & {
+            position    : relative;
+            // Aspect ratio, before image is loaded
+            padding-top : 75%;
+        }
+    }
+
+    img {
+        aspect-ratio     : calc(1024 / 768);
+        background-color : #fff;
+        transition       : all 0.2s;
+        border           : 1px solid #e4e5e6;
+        border-radius    : 3px;
+
+        // TODO: Remove when Safari supports aspect-ratio
+        .b-safari & {
+            position   : absolute;
+            top        : 0;
+            max-width  : 100%;
+            max-height : 100%;
+        }
+    }
+
+    i {
+        font-size           : 1em;
+        border-radius       : 50%;
+        margin-inline-start : .35em;
+        opacity             : 0.6;
+        transition          : opacity 0.2s linear;
+
+        &::before {
+            display    : block;
+            width      : 1em;
+            height     : 1em;
+            text-align : center;
+        }
+
+        &:hover {
+            opacity : 1;
+        }
+    }
+
+    .title {
+        display             : block;
+        cursor              : pointer;
+        padding             : 1em .5em .5em;
+        text-align          : center;
+        color               : #000;
+        -webkit-user-select : text;
+        -moz-user-select    : text;
+        -ms-user-select     : text;
+        user-select         : text;
+        font-size           : 16px;
+    }
+
+    .version {
+        font-size  : .8em;
+        opacity    : 0.7;
+        margin-top : .5em;
+    }
+
+    .overlay {
+        position            : absolute;
+        inset-inline-start  : 1em;
+        top                 : 1em;
+        font-size           : 1em;
+        color               : #fff;
+        width               : 4em;
+        height              : 4em;
+        background-color    : #fff;
+
+        border-radius       : 50%;
+        background-size     : 3em;
+        background-repeat   : no-repeat;
+        background-position : center;
+
+        &.angular {
+            background-color : hsl(347deg 98% 90%);
+            background-image : url('./logo/angular.svg');
+            background-size  : 2.6em;
+        }
+
+        &.dotnet {
+            background-image : url('./logo/dotnet.svg')
+        }
+
+        &.extjs {
+            background-image : url('./logo/sencha.svg')
+        }
+
+        &.ionic {
+            background-image : url('./logo/ionic.svg')
+        }
+
+        &.php {
+            background-image : url('./logo/php.svg')
+        }
+
+        &.react {
+            background-color : hsl(189deg 100% 90%);
+            background-image : url('./logo/react.svg')
+        }
+
+        &.sharepoint {
+            background-image : url('./logo/sharepoint.svg')
+        }
+
+        &.salesforce {
+            display : none;
+        }
+
+        &.vue {
+            background-color    : hsl(153deg 48% 90%);
+            background-image    : url('./logo/vue.svg');
+            background-size     : 2.6em;
+            background-position : 50% 60%;
+        }
+
+        &.webpack {
+            background-image : url('./logo/webpack.svg')
+        }
+    }
+
+    &:hover {
+        .image {
+            transform : scale(1.02);
+        }
+
+        img {
+            box-shadow : 0 3px 9px rgba(0, 0, 0, 0.025), 0 3px 9px rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    &.b-focused {
+        border        : 2px dotted var(--blue);
+        border-radius : $widget-border-radius;
+        outline       : none;
+    }
+}
+
+.b-demo-unavailable {
+    .b-panel-header {
+        background-color : #ff9800;
+        color            : white;
+    }
+
+    .b-panel-content {
+        padding : 1em;
+    }
+}
+
+.b-tooltip {
+    ul {
+        padding : 0 1.5em;
+
+        li {
+            white-space : nowrap;
+        }
+    }
+}
+
+@media (max-width : 800px) {
+    #intro {
+        #live-example {
+            display   : none;
+            max-width : 0;
+        }
+
+        p {
+            margin : 0;
+        }
+    }
+
+    #container .b-toolbar .b-button {
+        width : 3.5em !important;
+
+        label {
+            display : none;
+        }
+    }
+
+    .group-header a {
+        font-size : .6em;
+    }
+}
+
+@media (max-width : 570px) {
+    p {
+        font-size   : calc(.7em + 1vw);
+        line-height : calc(1.1em + 1vw);
+    }
+
+    [data-ref=filterField],
+    [data-ref=jumpTo] {
+        display : none;
+    }
+
+    .group-path {
+        display : none;
+    }
+}
+
+@media (max-width : 350px) {
+    #container .b-toolbar .b-button {
+        display : none;
+    }
+}
+
+.light {
+    #intro {
+        background-color : #039be5;
+    }
+}
+
+iframe[name=aweberFrame] {
+    display : none;
+}
+
+.demo-header {
+    z-index    : 21;
+    min-height : 39px;
+}
+
+.b-theme-classic .b-toolbar {
+    background : #eee;
+}
+
+.b-theme-classic-dark .example img {
+    border : none;
+}
+
+//region During load
+
+.is-loading-theme {
+    .demo-header {
+        height : 38px;
+    }
+
+    &.b-theme-classic #toolbar {
+        background-color : #eee !important;
+    }
+
+    &.b-theme-classic-dark #toolbar {
+        background-color : #2b2b2f !important;
+    }
+
+    &.b-theme-classic-light #toolbar {
+        background-color : #f9f9f9 !important;
+    }
+
+    .b-tool {
+        display : none;
+    }
+
+    #toolbar {
+        min-height : 4em !important;
+    }
+}
+
+//endregion

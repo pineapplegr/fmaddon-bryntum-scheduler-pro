@@ -1,0 +1,59 @@
+.b-sch-event{
+  box-shadow:0 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+#main{
+  display:flex;
+  flex-direction:row;
+  flex:1 1 100%;
+}
+
+.b-grid-header{
+  height:57px;
+}
+
+.b-unplannedgrid .b-grid-cell i{
+  margin-inline-end:0.5em;
+}
+.b-unplannedgrid .b-fa-clock{
+  margin-inline-end:0 !important;
+}
+
+.b-unassigned-class.b-drag-proxy .b-sch-event{
+  background:#a8eeac;
+  box-shadow:0 1px 1px 0 rgba(0, 0, 0, 0.25);
+  grid-row:1;
+}
+.b-unassigned-class.b-drag-proxy.b-drag-invalid .b-sch-event{
+  border-color:darkred;
+}
+
+.b-sch-event{
+  border-radius:0.5em;
+}
+
+.b-sch-event-content{
+  display:flex;
+  flex-direction:row;
+  font-size:15px;
+  flex:1;
+}
+.b-sch-event-content i{
+  order:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.b-sch-event-content .b-event-text-wrap{
+  flex:1;
+}
+.b-sch-event-content .b-event-text-wrap > div{
+  font-size:1.1em;
+  font-weight:500;
+}
+.b-sch-event-content .b-event-text-wrap span{
+  font-size:0.8em;
+  font-weight:normal;
+}
+
+/*# sourceMappingURL=app.css.map */

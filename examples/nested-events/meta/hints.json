@@ -1,0 +1,6 @@
+{
+  ".b-nested-event": {
+    "title": "Nested event can be moved",
+    "content": "Use drag-n-drop or TaskEditor to manage nested events"
+  }
+}

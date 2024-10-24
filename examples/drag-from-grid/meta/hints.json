@@ -1,0 +1,14 @@
+{
+  "[data-ref=unplanned] .b-grid-header": {
+    "align": {
+      "align": "t-b",
+      "offset": [0, 180]
+    },
+    "title": "Unplanned sessions",
+    "content": "Drag these session onto the schedule to assign to a room. <br><br><b>Note:</b> This demo uses the <a href='https://bryntum.com/products/grid/'>Bryntum Grid</a> component which is licensed separately."
+  },
+  ".b-sch-event": {
+    "title": "Unassign",
+    "content": "Right click a session and select 'Unschedule session' to move it to unassigned sessions"
+  }
+}

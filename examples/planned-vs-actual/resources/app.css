@@ -1,0 +1,79 @@
+.b-grid-cell i{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  background-color:#333;
+  border-radius:50%;
+  width:2.5em;
+  height:2.5em;
+  margin-inline-end:0.5em;
+}
+
+.b-sch-event{
+  border-radius:2px;
+}
+
+.b-sch-event-tooltip{
+  max-width:none;
+}
+.b-sch-event-tooltip,
+.b-sch-event-tooltip > .b-panel-body-wrap > .b-panel-content{
+  border-radius:0.5em !important;
+}
+.b-sch-event-tooltip .b-panel-content{
+  padding:2em !important;
+  margin:0 !important;
+}
+.b-sch-event-tooltip .b-panel-content{
+  display:grid;
+  grid-template-columns:15em auto;
+  grid-column-gap:2em;
+  grid-row-gap:2em;
+}
+.b-sch-event-tooltip .field{
+  display:flex;
+  flex-direction:column;
+  font-weight:500;
+}
+.b-sch-event-tooltip .field label{
+  margin-bottom:0.5em;
+  color:#888;
+}
+.b-sch-event-tooltip .b-avatar-container{
+  display:flex;
+  gap:0.3em;
+}
+
+.b-sch-resourcetimerange{
+  background:transparent;
+  padding:15px 0;
+  transition:opacity 0.3s !important;
+  opacity:0;
+}
+.b-sch-resourcetimerange.shown{
+  opacity:1;
+}
+.b-sch-resourcetimerange.actual-color > div{
+  background-color:rgba(49, 131, 254, 0.1019607843);
+  color:#015be2;
+}
+.b-sch-resourcetimerange.planned-color > div{
+  background-color:rgba(160, 160, 160, 0.1019607843);
+  color:#7e7272;
+}
+.b-sch-resourcetimerange > div{
+  height:100%;
+  align-items:center;
+}
+.b-sch-resourcetimerange > div .b-sch-event-content{
+  margin:0 0.5em 0 0.75em;
+  overflow:clip;
+  white-space:nowrap;
+}
+
+.b-has-label.b-label-before .b-label{
+  flex:0 0 7.5em !important;
+}
+
+/*# sourceMappingURL=app.css.map */

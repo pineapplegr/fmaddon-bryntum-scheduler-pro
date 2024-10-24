@@ -1,0 +1,288 @@
+{
+  "success"   : true,
+  "resources" : {
+    "rows" : [
+      {
+        "id"         : 1,
+        "name"       : "Chang",
+        "role"       : "Service technician",
+        "eventColor" : "#3183fe"
+      },
+      {
+        "id"         : 2,
+        "name"       : "Dave",
+        "role"       : "Computer Technician",
+        "eventColor" : "#3183fe"
+      },
+      {
+        "id"         : 3,
+        "name"       : "George",
+        "role"       : "Service technician",
+        "eventColor" : "#3183fe"
+      },
+      {
+        "id"         : 4,
+        "name"       : "Linda",
+        "role"       : "Service technician",
+        "eventColor" : "#3183fe"
+      },
+      {
+        "id"         : 5,
+        "name"       : "Kate",
+        "role"       : "IT Service specialist",
+        "eventColor" : "#a0a0a0"
+      },
+      {
+        "id"         : 6,
+        "name"       : "Mike",
+        "role"       : "Maintenance Technician",
+        "eventColor" : "#a0a0a0"
+      },
+      {
+        "id"         : 7,
+        "name"       : "Lee",
+        "role"       : "Maintenance Technician",
+        "eventColor" : "#a0a0a0"
+      },
+      {
+        "id"         : 8,
+        "name"       : "Amit",
+        "role"       : "Electronics Technician",
+        "eventColor" : "#a0a0a0"
+      },
+      {
+        "id"         : 9,
+        "name"       : "Mark",
+        "role"       : "Field Engineer",
+        "eventColor" : "#3183fe"
+      }
+    ]
+  },
+  "events" : {
+    "rows" : [
+      {
+        "id"         : 1,
+        "resourceId" : 1,
+        "name"       : "Bridge repair",
+        "startDate"  : "2025-12-01T08:00:00",
+        "duration"   : 4,
+        "address"    : {
+          "place_id"     : 313799674,
+          "display_name" : "Brooklyn Bridge, Dover Street, Financial District, Manhattan Community Board 1, Manhattan, New York County, New York, 10038, United States of America",
+          "lat"          : 40.7061,
+          "lon"          : -73.9969
+        },
+        "preamble"  : "1h",
+        "postamble" : "1h"
+      },
+      {
+        "id"         : 2,
+        "resourceId" : 1,
+        "name"       : "Tunnel ventilation maintenance",
+        "startDate"  : "2025-12-01T15:00:00",
+        "duration"   : 3,
+        "address"    : {
+          "place_id"     : 13540933,
+          "display_name" : "Lincoln tunnel",
+          "lat"          : 40.762491,
+          "lon"          : -74.009914
+        },
+        "preamble"  : "30min",
+        "postamble" : "1h"
+      },
+      {
+        "id"         : 3,
+        "resourceId" : 2,
+        "name"       : "Fix Windows 10 corrupt installation",
+        "startDate"  : "2025-12-01T09:00:00",
+        "duration"   : 3,
+        "address"    : {
+          "place_id"     : 15480051,
+          "display_name" : "Midtown Manhattan",
+          "lat"          : 40.7549,
+          "lon"          : -73.9840
+        }
+      },
+      {
+        "id"         : 4,
+        "resourceId" : 4,
+        "name"       : "Drain flooded subway",
+        "startDate"  : "2025-12-01T10:00:00",
+        "duration"   : 8,
+        "address"    : {
+          "place_id"     : 314533457,
+          "display_name" : "Broadway",
+          "lat"          : 40.790886,
+          "lon"          : -73.974709
+        },
+        "preamble"  : "30min",
+        "postamble" : "2h"
+      },
+      {
+        "id"         : 5,
+        "resourceId" : 7,
+        "name"       : "Repair coffee machine",
+        "startDate"  : "2025-12-01T12:00:00",
+        "duration"   : 4,
+        "eventColor" : "#ba2ce5",
+        "address"    : {
+          "place_id"     : 15496625,
+          "display_name" : "Starbucks, 1281, 1st Avenue",
+          "lat"          : 40.726553,
+          "lon"          : -74.033361
+        },
+        "preamble"  : "1h",
+        "postamble" : "1h"
+      },
+      {
+        "id"         : 6,
+        "resourceId" : 9,
+        "name"       : "Remove road block",
+        "startDate"  : "2025-12-01T10:00:00",
+        "duration"   : 2,
+        "address"    : {
+          "place_id"     : 15462286,
+          "display_name" : "Union Square",
+          "lat"          : 40.7359,
+          "lon"          : -73.9911
+        },
+        "preamble"  : "2h",
+        "postamble" : "30min"
+      },
+      {
+        "id"         : 16,
+        "resourceId" : 8,
+        "name"       : "Build Covid test center",
+        "startDate"  : "2025-12-01T13:00:00",
+        "duration"   : 5,
+        "address"    : {
+          "place_id"     : 313913297,
+          "display_name" : "Kings County Hospital Center",
+          "lat"          : 40.6566,
+          "lon"          : -73.9440
+        },
+        "preamble"  : "45min",
+        "postamble" : "30min"
+      },
+      {
+        "id"         : 111,
+        "resourceId" : 1,
+        "name"       : "Bridge repair part 2",
+        "startDate"  : "2025-12-02T09:00:00",
+        "duration"   : 8,
+        "address"    : {
+          "place_id"     : 313799674,
+          "display_name" : "Brooklyn bridge",
+          "lat"          : 40.7061,
+          "lon"          : -73.9969
+        },
+        "preamble"  : "30min",
+        "postamble" : "30min"
+      },
+      {
+        "id"         : 112,
+        "resourceId" : 3,
+        "name"       : "Rake leaves to avoid wildfire",
+        "startDate"  : "2025-12-02T15:00:00",
+        "duration"   : 3,
+        "address"    : {
+          "place_id"     : 15050619,
+          "display_name" : "Forest park",
+          "lat"          : 40.7032623,
+          "lon"          : -73.84609986721708
+        },
+        "preamble"  : "45min",
+        "postamble" : "30min"
+      },
+      {
+        "id"         : 113,
+        "resourceId" : 2,
+        "name"       : "Replace IE & Edge with Chrome",
+        "startDate"  : "2025-12-02T09:00:00",
+        "duration"   : 4,
+        "eventColor" : "#ba2ce5",
+        "address"    : {
+          "place_id"     : 314085752,
+          "display_name" : "Bryant Park, West 42nd Street",
+          "lat"          : 40.75375085,
+          "lon"          : -73.98354279430387
+        },
+        "preamble"  : "1h",
+        "postamble" : "1h"
+      },
+      {
+        "id"         : 114,
+        "resourceId" : 5,
+        "name"       : "Remove dust from empty seats",
+        "startDate"  : "2025-12-02T10:00:00",
+        "duration"   : 4,
+        "address"    : {
+          "place_id"     : 314724705,
+          "display_name" : "Belasco Theatre",
+          "lat"          : 40.7566,
+          "lon"          : -73.9839
+        },
+        "preamble"  : "30min",
+        "postamble" : "30min"
+      },
+      {
+        "id"         : 115,
+        "resourceId" : 5,
+        "name"       : "Road maintenance",
+        "startDate"  : "2025-12-02T14:00:00",
+        "duration"   : 3,
+        "address"    : {
+          "place_id"     : 15490971,
+          "display_name" : "4th st",
+          "lat"          : 40.7896239,
+          "lon"          : -73.9598939
+        }
+      },
+      {
+        "id"         : 116,
+        "resourceId" : 7,
+        "name"       : "Remove debris",
+        "startDate"  : "2025-12-02T14:00:00",
+        "duration"   : 2,
+        "address"    : {
+          "place_id"     : 15524776,
+          "display_name" : "Central Park",
+          "lat"          : 40.7812,
+          "lon"          : -73.9665
+        },
+        "preamble"  : "1h",
+        "postamble" : "1h"
+      },
+      {
+        "id"         : 117,
+        "resourceId" : 8,
+        "name"       : "Traffic light maintenance",
+        "startDate"  : "2025-12-02T13:00:00",
+        "duration"   : 5,
+        "address"    : {
+          "place_id"     : 314667023,
+          "display_name" : "Trump Tower",
+          "lat"          : 40.7624,
+          "lon"          : -73.9738
+        },
+        "preamble"  : "1h",
+        "postamble" : "1h"
+      },
+      {
+        "id"         : 118,
+        "resourceId" : 4,
+        "name"       : "Restore power after outage",
+        "startDate"  : "2025-12-02T11:00:00",
+        "duration"   : 4,
+        "address"    : {
+          "place_id"     : 314271492,
+          "display_name" : "Grover Cleveland High School",
+          "lat"          : 40.7114,
+          "lon"          : -73.9089
+        },
+        "preamble"  : "1h",
+        "postamble" : "1h"
+      }
+    ]
+  }
+}

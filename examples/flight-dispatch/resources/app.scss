@@ -1,0 +1,195 @@
+.b-grid-header-text {
+    padding : .5em 0;
+}
+
+.b-sch-event {
+    border-radius  : 0.5em;
+
+    container-name : event;
+    container-type : size;
+}
+
+
+.b-buffer-label {
+    display : none;
+
+    .b-sch-event-hover & {
+        display : block;
+    }
+}
+
+.b-sch-event-content {
+    flex           : 1;
+    flex-direction : column;
+    height         : 100%;
+
+    .b-flight-number {
+        display     : flex;
+        flex        : 1;
+        flex-shrink : 0;
+        align-items : center;
+        font-size   : .8em;
+        transition  : font-size .3s;
+    }
+
+    .b-flight-details {
+        display     : flex;
+        align-items : center;
+        font-size   : .8em;
+        transition  : flex .3s;
+        flex        : 0;
+        min-height  : 0;
+    }
+
+    .b-flight-duration {
+        margin-inline-start : auto;
+    }
+}
+
+
+@container event (height > 32px) {
+    .b-sch-event .b-flight-details {
+        flex : 1;
+    }
+}
+
+
+@container event (height > 52px) {
+    .b-sch-event .b-flight-number {
+        font-size : 1.1em;
+    }
+}
+
+
+.b-popup.b-sch-event-tooltip {
+    max-width : 35em;
+
+    .b-panel-content {
+        display         : flex;
+        min-height      : 10em;
+        flex-direction  : column;
+        justify-content : space-around;
+        padding         : 2em;
+        flex-wrap       : nowrap;
+        margin          : 0;
+    }
+
+    .flight {
+        display       : flex;
+        border-radius : 1em;
+        overflow      : hidden;
+        margin        : 0 20px;
+
+        > div {
+            padding         : 0.5em;
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            white-space     : nowrap;
+        }
+
+        strong {
+            margin-inline-end : .5em;
+        }
+
+        .flightTime {
+            background : lightblue;
+            padding    : 0 5em;
+            width      : 270px;
+        }
+
+        .taxiing {
+            display        : flex;
+            width          : 53px;
+            background     : #eee;
+            flex-direction : column;
+        }
+
+        &:nth-child(3) {
+            margin-top : 3em;
+        }
+
+        .b-fa-arrow-right {
+            margin : 0 .5em;
+        }
+    }
+
+    .timing {
+        display              : flex;
+        margin-top           : .5em;
+        color                : #999;
+        font-size            : .8em;
+        padding-inline-start : 0.5em;
+
+        > div:not(.duration) {
+            width : 55px;
+        }
+
+        .duration {
+            flex       : 1;
+            text-align : center;
+            width      : 190px;
+        }
+    }
+
+    .warning {
+        display     : flex;
+        margin-top  : 2em;
+        color       : darkred;
+        white-space : nowrap;
+        font-weight : 500;
+        font-size   : .9em;
+
+        i {
+            margin-inline-end : .5em;
+        }
+    }
+}
+
+.b-legend {
+    display               : grid;
+    background-color      : transparent;
+    min-width             : 76em;
+    grid-template-columns : repeat(7, 11em);
+
+    &:has(.b-selected) .b-list-item:not(.b-selected) {
+        opacity : .5;
+    }
+
+    .b-selected-icon {
+        font-size : .8em;
+    }
+
+    .b-list-item {
+        background-color : transparent !important;
+        transition       : opacity .4s;
+        border           : 0 !important;
+        padding          : 0.4em;
+
+        &.b-selected {
+            font-weight : 600;
+        }
+
+        .b-color-square {
+            height            : 1em;
+            width             : 1em;
+            border-radius     : 4px;
+            margin-inline-end : .5em;
+        }
+
+        .b-color-square,
+        .b-icon {
+            margin-inline-end : .4em;
+
+            &,
+            &:before {
+                width : 1em;
+            }
+        }
+    }
+}
+
+.b-sch-event:not(.b-milestone) .b-fa {
+    margin-inline-end : 0.5em;
+}
+

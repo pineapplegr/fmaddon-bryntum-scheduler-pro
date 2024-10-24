@@ -1,0 +1,88 @@
+.b-grid-cell i {
+    display           : inline-flex;
+    align-items       : center;
+    justify-content   : center;
+    color             : #fff;
+    background-color  : #333;
+    border-radius     : 50%;
+    width             : 2.5em;
+    height            : 2.5em;
+    margin-inline-end : .5em;
+}
+
+.b-sch-event {
+    border-radius : 2px;
+}
+
+.b-sch-event-tooltip {
+    max-width : none;
+    
+    &,
+    > .b-panel-body-wrap > .b-panel-content {
+        border-radius : .5em !important;
+    }
+
+    .b-panel-content {
+        padding : 2em !important;
+        margin  : 0 !important;
+    }
+
+    .b-panel-content {
+        display               : grid;
+        grid-template-columns : 15em auto;
+        grid-column-gap       : 2em;
+        grid-row-gap          : 2em;
+    }
+
+    .field {
+        display        : flex;
+        flex-direction : column;
+        font-weight    : 500;
+
+        label {
+            margin-bottom : 0.5em;
+            color         : #888;
+        }
+    }
+
+    .b-avatar-container {
+        display : flex;
+        gap     : 0.3em;
+    }
+}
+
+.b-sch-resourcetimerange {
+    background : transparent;
+    padding    : 15px 0;
+    transition : opacity 0.3s !important;
+    opacity    : 0;
+
+    &.shown {
+        opacity : 1;
+    }
+
+    &.actual-color > div {
+        background-color : #3183fe1a;
+        color            : #015be2;
+    }
+
+    &.planned-color > div {
+        background-color : #a0a0a01a;
+        color            : #7e7272;
+    }
+
+    > div {
+        height           : 100%;
+        align-items      : center;
+
+        .b-sch-event-content {
+            margin      : 0 0.5em 0 0.75em;
+            overflow    : clip;
+            white-space : nowrap;
+        }
+    }
+}
+
+.b-has-label.b-label-before .b-label {
+    flex: 0 0 7.5em !important;
+}

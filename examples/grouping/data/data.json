@@ -1,0 +1,356 @@
+{
+  "success"   : true,
+  "calendars" : {
+    "rows" : [
+      {
+        "id"                       : "day",
+        "name"                     : "Day",
+        "unspecifiedTimeIsWorking" : false,
+        "intervals"                : [
+          {
+            "recurrentStartDate" : "at 8:00",
+            "recurrentEndDate"   : "at 17:00",
+            "isWorking"          : true
+          }
+        ]
+      },
+      {
+        "id"                       : "early",
+        "name"                     : "Morning",
+        "unspecifiedTimeIsWorking" : false,
+        "intervals"                : [
+          {
+            "recurrentStartDate" : "at 6:00",
+            "recurrentEndDate"   : "at 14:00",
+            "isWorking"          : true
+          }
+        ]
+      },
+      {
+        "id"                       : "late",
+        "name"                     : "Evening",
+        "unspecifiedTimeIsWorking" : false,
+        "intervals"                : [
+          {
+            "recurrentStartDate" : "at 16:00",
+            "recurrentEndDate"   : "at 00:00",
+            "isWorking"          : true
+          }
+        ]
+      },
+      {
+        "id"                       : "night",
+        "name"                     : "Night",
+        "unspecifiedTimeIsWorking" : false,
+        "intervals"                : [
+          {
+            "recurrentStartDate" : "at 22:00",
+            "recurrentEndDate"   : "at 6:00",
+            "isWorking"          : true
+          }
+        ]
+      }
+    ]
+  },
+  "resources" : {
+    "rows" : [
+      {
+        "id"         : 1,
+        "name"       : "George",
+        "calendar"   : "day",
+        "type"       : "Operators",
+        "eventColor" : "blue"
+      },
+      {
+        "id"         : 2,
+        "name"       : "Rob",
+        "calendar"   : "late",
+        "type"       : "Operators",
+        "eventColor" : "blue"
+      },
+      {
+        "id"       : 3,
+        "name"     : "Mike",
+        "calendar" : "early",
+        "type"     : "Operators"
+      },
+      {
+        "id"       : 4,
+        "name"     : "Celia",
+        "calendar" : "early",
+        "type"     : "Operators"
+      },
+      {
+        "id"         : 5,
+        "name"       : "Electric forklift",
+        "eventStyle" : "plain",
+        "image"      : false,
+        "iconCls"    : "b-fa b-fa-truck-loading",
+        "type"       : "Machines"
+      },
+      {
+        "id"         : 6,
+        "name"       : "Workstation T22",
+        "eventStyle" : "plain",
+        "image"      : false,
+        "iconCls"    : "b-fa b-fa-desktop",
+        "type"       : "Machines"
+      },
+      {
+        "id"         : 7,
+        "name"       : "Robot AT4",
+        "image"      : false,
+        "eventStyle" : "plain",
+        "iconCls"    : "b-fa b-fa-robot",
+        "type"       : "Machines"
+      },
+      {
+        "id"         : 8,
+        "name"       : "Assembly station",
+        "image"      : false,
+        "eventStyle" : "plain",
+        "iconCls"    : "b-fa b-fa-cogs",
+        "type"       : "Machines"
+      }
+    ]
+  },
+  "events" : {
+    "rows" : [
+      {
+        "id"             : 1,
+        "name"           : "Meeting",
+        "startDate"      : "2020-03-23T07:00",
+        "duration"       : 4,
+        "durationUnit"   : "hour",
+        "constraintDate" : "2020-03-23T07:00",
+        "constraintType" : "startnoearlierthan",
+        "percentDone"    : 100
+      },
+      {
+        "id"           : 13,
+        "name"         : "Get parts",
+        "durationUnit" : "hour",
+        "duration"     : 3,
+        "percentDone"  : 40
+      },
+      {
+        "id"           : 14,
+        "name"         : "Assembly",
+        "startDate"    : "2020-03-23T06:00",
+        "durationUnit" : "hour",
+        "duration"     : 3,
+        "percentDone"  : 40
+      },
+      {
+        "id"           : 15,
+        "name"         : "Chip installation",
+        "durationUnit" : "hour",
+        "duration"     : 4,
+        "percentDone"  : 20
+      },
+      {
+        "id"           : 16,
+        "name"         : "Inspection",
+        "durationUnit" : "hour",
+        "duration"     : 3,
+        "percentDone"  : 10
+      },
+      {
+        "id"           : 17,
+        "name"         : "Maintenance",
+        "eventColor"   : "red",
+        "eventStyle"   : "dashed",
+        "iconCls"      : "b-fa b-fa-hammer",
+        "durationUnit" : "hour",
+        "duration"     : 3,
+        "percentDone"  : 0
+      },
+      {
+        "id"           : 18,
+        "startDate"    : "2020-03-23T20:00",
+        "name"         : "Recharge",
+        "eventColor"   : "red",
+        "eventStyle"   : "dashed",
+        "iconCls"      : "b-fa b-fa-bolt",
+        "durationUnit" : "hour",
+        "duration"     : 8,
+        "percentDone"  : 0
+      }
+    ]
+  },
+  "assignments" : {
+    "rows" : [
+      {
+        "id"       : 1,
+        "event"    : 1,
+        "resource" : 1
+      },
+      {
+        "id"       : 2,
+        "event"    : 2,
+        "resource" : 1
+      },
+      {
+        "id"       : 3,
+        "event"    : 3,
+        "resource" : 1
+      },
+      {
+        "id"       : 4,
+        "event"    : 4,
+        "resource" : 1
+      },
+      {
+        "id"       : 5,
+        "event"    : 5,
+        "resource" : 2
+      },
+      {
+        "id"       : 6,
+        "event"    : 6,
+        "resource" : 2
+      },
+      {
+        "id"       : 7,
+        "event"    : 7,
+        "resource" : 2
+      },
+      {
+        "id"       : 9,
+        "event"    : 13,
+        "resource" : 4
+      },
+      {
+        "id"       : 12,
+        "event"    : 14,
+        "resource" : 3
+      },
+      {
+        "id"       : 13,
+        "event"    : 9,
+        "resource" : 4
+      },
+      {
+        "id"       : 16,
+        "event"    : 10,
+        "resource" : 3
+      },
+      {
+        "id"       : 17,
+        "event"    : 10,
+        "resource" : 4
+      },
+      {
+        "id"       : 20,
+        "event"    : 11,
+        "resource" : 3
+      },
+      {
+        "id"       : 21,
+        "event"    : 11,
+        "resource" : 4
+      },
+      {
+        "id"       : 24,
+        "event"    : 12,
+        "resource" : 3
+      },
+      {
+        "id"       : 25,
+        "event"    : 12,
+        "resource" : 4
+      },
+      {
+        "id"       : 28,
+        "event"    : 13,
+        "resource" : 5
+      },
+      {
+        "id"       : 29,
+        "event"    : 16,
+        "resource" : 2
+      },
+      {
+        "id"       : 47,
+        "event"    : 16,
+        "resource" : 6
+      },
+      {
+        "id"       : 32,
+        "event"    : 14,
+        "resource" : 8
+      },
+      {
+        "id"       : 33,
+        "event"    : 15,
+        "resource" : 7
+      },
+      {
+        "id"       : 34,
+        "event"    : 17,
+        "resource" : 7
+      },
+      {
+        "id"       : 35,
+        "event"    : 17,
+        "resource" : 2
+      },
+      {
+        "id"       : 36,
+        "event"    : 18,
+        "resource" : 5
+      }
+    ]
+  },
+  "dependencies" : {
+    "rows" : [
+      {
+        "id"        : 1,
+        "fromEvent" : 14,
+        "toEvent"   : 13
+      },
+      {
+        "id"        : 2,
+        "fromEvent" : 13,
+        "toEvent"   : 15
+      },
+      {
+        "id"        : 3,
+        "fromEvent" : 15,
+        "toEvent"   : 16
+      },
+      {
+        "id"        : 4,
+        "fromEvent" : 16,
+        "toEvent"   : 17,
+        "lag"       : 1,
+        "lagUnit"   : "h"
+      }
+    ]
+  },
+  "timeRanges" : {
+    "rows" : [
+      {
+        "id"        : 1,
+        "startDate" : "2020-03-23T15:00",
+        "iconCls"   : "b-fa b-fa-coffee",
+        "name"      : "Fika"
+      },
+      {
+        "id"           : 2,
+        "startDate"    : "2020-03-23T12:00",
+        "duration"     : 2,
+        "durationUnit" : "h",
+        "name"         : "Lunch"
+      },
+      {
+        "id"           : 3,
+        "startDate"    : "2020-03-23T22:00",
+        "iconCls"      : "b-fa b-fa-fw b-fa-fire",
+        "duration"     : 4,
+        "durationUnit" : "h",
+        "name"         : "Fire alarm test"
+      }
+    ]
+  }
+}

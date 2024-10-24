@@ -1,0 +1,16 @@
+{
+  "name": "@bryntum/schedulerpro",
+  "version": "6.1.1",
+  "description": "Bryntum SchedulerPro JavaScript component",
+  "author": {
+    "name": "Bryntum",
+    "url": "https://bryntum.com",
+    "email": "info@bryntum.com"
+  },
+  "homepage": "https://bryntum.com",
+  "license": "Commercial",
+  "devDependencies": {},
+  "main": "schedulerpro.module.js",
+  "types": "./schedulerpro.d.ts",
+  "type": "module"
+}

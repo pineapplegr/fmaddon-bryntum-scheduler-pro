@@ -1,0 +1,61 @@
+{
+  "success"   : true,
+  "resources" : {
+    "rows" : [
+      {
+        "id"      : 1,
+        "name"    : "Headquarters",
+        "iconCls" : "b-fa b-fa-city"
+      },
+      {
+        "id"      : 2,
+        "name"    : "Office #1",
+        "iconCls" : "b-fa b-fa-building",
+        "url"     : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbuffer.com%2Flibrary%2Ffree-images%2F&psig=AOvVaw08PPbyZ7ywJbQuLf6ItdnO&ust=1729084051554000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDyh5e6kIkDFQAAAAAdAAAAABAE"
+      }
+    ]
+  },
+  "events" : {
+    "rows" : [
+      {
+        "id"               : 1,
+        "name"             : "Site Preparation",
+        "plannedStartDate" : "2024-03-11T08:00",
+        "plannedEndDate"   : "2024-03-11T09:30",
+        "actualStartDate"  : "2024-03-11T08:15",
+        "actualEndDate"    : "2024-03-11T09:45"
+      },
+      {
+        "id"               : 2,
+        "name"             : "Concrete Pouring",
+        "plannedStartDate" : "2024-03-11T10:00",
+        "plannedEndDate"   : "2024-03-11T12:00",
+        "actualStartDate"  : "2024-03-11T10:15",
+        "actualEndDate"    : "2024-03-11T12:30"
+      }
+    ]
+  },
+  "assignments" : {
+    "rows" : [
+      {
+        "id"       : 1,
+        "event"    : 1,
+        "resource" : 1
+      },
+      {
+        "id"       : 2,
+        "event"    : 2,
+        "resource" : 2
+      }
+    ]
+  },
+  "dependencies" : {
+    "rows" : [
+      {
+        "id"        : 1,
+        "fromEvent" : 1,
+        "toEvent"   : 2
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+.b-sch-event-wrap .b-nested-events-container{
+  background-image:repeating-linear-gradient(135deg, #eee, #eee 3px, #fff 3px, #fff 6px);
+}
+.b-sch-event-wrap .b-sch-event-selected .b-nested-events-container, .b-sch-event-wrap:hover .b-nested-events-container{
+  background-image:repeating-linear-gradient(135deg, #e8e8e8, #e8e8e8 3px, #fff 3px, #fff 6px) !important;
+}
+
+.b-theme-classic-dark .b-nested-events-container{
+  background-image:repeating-linear-gradient(135deg, #777, #777 3px, #444 3px, #444 6px);
+}
+.b-theme-classic-dark .b-sch-event-selected .b-nested-events-container, .b-theme-classic-dark:hover .b-nested-events-container{
+  background-image:repeating-linear-gradient(135deg, #888, #888 3px, #555 3px, #555 6px) !important;
+}
+
+.b-sch-event-tooltip h4{
+  margin-block:0.7em 0.2em;
+}
+
+/*# sourceMappingURL=app.css.map */

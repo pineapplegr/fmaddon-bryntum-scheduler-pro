@@ -1,0 +1,22 @@
+{
+  "name": "fmbryntum-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --force",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.1",
+    "vite-plugin-minify": "^2.0.0",
+    "vite-plugin-singlefile": "^2.0.2"
+  },
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.8",
+    "@pineapplegr/fm-bryntum-driver": "^1.0.0",
+    "fm-gofer": "^1.10.0",
+    "fm-mock": "^1.5.0"
+  }
+}

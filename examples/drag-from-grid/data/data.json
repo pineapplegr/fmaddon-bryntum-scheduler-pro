@@ -1,0 +1,315 @@
+{
+  "success" : true,
+  "rooms"   : {
+    "rows" : [
+      {
+        "id"        : 1,
+        "name"      : "Bristol",
+        "capacity"  : 500,
+        "equipment" : [
+          "film",
+          "microphone",
+          "headset",
+          "video"
+        ]
+      },
+      {
+        "id"        : 2,
+        "name"      : "Leeds",
+        "capacity"  : 50,
+        "equipment" : [
+          "film",
+          "chalkboard",
+          "headset",
+          "video"
+        ]
+      },
+      {
+        "id"        : 3,
+        "name"      : "York",
+        "capacity"  : 20,
+        "equipment" : [
+          "tv",
+          "chalkboard",
+          "video",
+          "headphones"
+        ]
+      },
+      {
+        "id"        : 4,
+        "name"      : "Portsmouth",
+        "capacity"  : 30,
+        "equipment" : [
+          "tv",
+          "chalkboard"
+        ]
+      },
+      {
+        "id"        : 5,
+        "name"      : "Coventry",
+        "capacity"  : 300,
+        "equipment" : [
+          "film",
+          "microphone",
+          "headset",
+          "video"
+        ]
+      },
+      {
+        "id"        : 6,
+        "name"      : "Chester",
+        "capacity"  : 16,
+        "equipment" : ["chalkboard"]
+      },
+      {
+        "id"        : 7,
+        "name"      : "Reading",
+        "capacity"  : 20,
+        "equipment" : [
+          "tv",
+          "chalkboard",
+          "headset",
+          "video"
+        ]
+      },
+      {
+        "id"        : 8,
+        "name"      : "Bournemouth",
+        "capacity"  : 200,
+        "equipment" : [
+          "tv",
+          "chalkboard",
+          "microphone",
+          "headset",
+          "video"
+        ]
+      },
+      {
+        "id"        : 9,
+        "name"      : "Chelmsford",
+        "capacity"  : 10,
+        "equipment" : [
+          "tv",
+          "headphones",
+          "cat"
+        ]
+      },
+      {
+        "id"        : 10,
+        "name"      : "Sunderland",
+        "capacity"  : 100,
+        "equipment" : [
+          "film",
+          "chalkboard",
+          "headset",
+          "video"
+        ]
+      },
+      {
+        "id"        : 11,
+        "name"      : "Lincoln",
+        "capacity"  : 50,
+        "equipment" : [
+          "film",
+          "chalkboard",
+          "microphone",
+          "video"
+        ]
+      },
+      {
+        "id"        : 12,
+        "name"      : "Rochester",
+        "capacity"  : 20,
+        "equipment" : [
+          "tv",
+          "chalkboard"
+        ]
+      },
+      {
+        "id"        : 13,
+        "name"      : "London",
+        "capacity"  : 1000,
+        "equipment" : [
+          "film",
+          "chalkboard",
+          "microphone",
+          "headset",
+          "video"
+        ]
+      }
+    ]
+  },
+  "sessions" : {
+    "rows" : [
+      {
+        "id"           : 1,
+        "name"         : "Top 10 tips for preppers",
+        "startDate"    : "2025-12-01T09:00:00",
+        "duration"     : 3,
+        "participants" : 490,
+        "client"       : "Preppers Club"
+      },
+      {
+        "id"           : 2,
+        "name"         : "Fly tying, intro",
+        "startDate"    : "2025-12-01T10:00:00",
+        "duration"     : 4,
+        "participants" : 50,
+        "client"       : "Friendly fly fishers",
+        "eventColor"   : "orange"
+      },
+      {
+        "id"           : 3,
+        "name"         : "Fly tying, group 1",
+        "duration"     : 4,
+        "participants" : 20,
+        "client"       : "Friendly fly fishers",
+        "eventColor"   : "orange"
+      },
+      {
+        "id"           : 4,
+        "name"         : "Fly tying, group 2",
+        "duration"     : 4,
+        "participants" : 30,
+        "client"       : "Friendly fly fishers",
+        "eventColor"   : "orange"
+      },
+      {
+        "id"           : 5,
+        "name"         : "Board meeting",
+        "startDate"    : "2025-12-01T09:00:00",
+        "duration"     : 3,
+        "participants" : 10,
+        "client"       : "Drilling inc"
+      },
+      {
+        "id"           : 6,
+        "name"         : "Successfully growing in any business",
+        "startDate"    : "2025-12-01T08:00:00",
+        "duration"     : 5,
+        "participants" : 200,
+        "client"       : "Growth hacking foundation"
+      },
+      {
+        "id"           : 7,
+        "name"         : "Cooking perfectly, blindfolded",
+        "startDate"    : "2025-12-01T09:00:00",
+        "duration"     : 4,
+        "participants" : 110,
+        "client"       : "Swedish chef"
+      },
+      {
+        "id"           : 8,
+        "name"         : "Audition",
+        "startDate"    : "2025-12-01T10:00:00",
+        "duration"     : 2,
+        "participants" : 30,
+        "client"       : "Farmer Seeks Wife"
+      },
+      {
+        "id"           : 9,
+        "name"         : "Reading circle",
+        "duration"     : 3,
+        "participants" : 20,
+        "client"       : "The Book Club"
+      },
+      {
+        "id"           : 10,
+        "name"         : "Dry aging meat at home",
+        "duration"     : 4,
+        "participants" : 50,
+        "client"       : "Swedish chef"
+      },
+      {
+        "id"           : 11,
+        "name"         : "Con-con: Construction conference",
+        "duration"     : 4,
+        "participants" : 100,
+        "client"       : "Construction Union"
+      },
+      {
+        "id"           : 12,
+        "name"         : "Boogie-woogie - Intro for all",
+        "duration"     : 2,
+        "participants" : 40,
+        "client"       : "Dance dance & co"
+      },
+      {
+        "id"           : 13,
+        "name"         : "Boogie-woogie - Beginners",
+        "duration"     : 4,
+        "participants" : 20,
+        "client"       : "Dance dance & co"
+      },
+      {
+        "id"           : 14,
+        "name"         : "Boogie-woogie - Advanced",
+        "duration"     : 4,
+        "participants" : 15,
+        "client"       : "Dance dance & co"
+      }
+    ]
+  },
+  "assignments" : {
+    "rows" : [
+      {
+        "id"         : 1,
+        "eventId"    : 1,
+        "resourceId" : 1
+      },
+      {
+        "id"         : 2,
+        "eventId"    : 2,
+        "resourceId" : 2
+      },
+      {
+        "id"         : 3,
+        "eventId"    : 3,
+        "resourceId" : 3
+      },
+      {
+        "id"         : 4,
+        "eventId"    : 4,
+        "resourceId" : 4
+      },
+      {
+        "id"         : 5,
+        "eventId"    : 5,
+        "resourceId" : 3
+      },
+      {
+        "id"         : 6,
+        "eventId"    : 6,
+        "resourceId" : 5
+      },
+      {
+        "id"         : 7,
+        "eventId"    : 7,
+        "resourceId" : 8
+      },
+      {
+        "id"         : 8,
+        "eventId"    : 8,
+        "resourceId" : 11
+      }
+    ]
+  },
+  "dependencies" : {
+    "rows" : [
+      {
+        "id"        : 1,
+        "fromEvent" : 2,
+        "toEvent"   : 3,
+        "lag"       : 1,
+        "lagUnit"   : "hour"
+      },
+      {
+        "id"        : 2,
+        "fromEvent" : 2,
+        "toEvent"   : 4,
+        "lag"       : 1,
+        "lagUnit"   : "hour"
+      }
+    ]
+  }
+}

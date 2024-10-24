@@ -1,0 +1,136 @@
+@import 'https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css';
+
+#main {
+    display        : flex;
+    flex-direction : row;
+    flex           : 1 1 100%;
+
+    .b-resourceheader {
+        height : 100%;
+    }
+
+    > .b-panel .b-toolbar {
+        height  : 4.3em;
+
+        .widget-title {
+            display     : flex;
+            align-items : center;
+            font-size   : 1.2em;
+        }
+    }
+}
+
+.b-sch-event {
+    border-radius : 3px;
+    box-shadow    : 0 3px 5px 0 rgba(0, 0, 0, 0.4);
+    border        : 1px solid rgba(0, 0, 0, .2);
+}
+
+.b-theme-material .widget-title {
+    color : #555;
+}
+
+.b-sch-event-content {
+    display         : flex;
+    height          : 100%;
+    flex-direction  : column;
+    justify-content : space-evenly;
+}
+
+.event-name {
+    font-size : 1.3em;
+}
+
+.location {
+    display     : block;
+    margin-top  : 0.3em;
+    font-weight : normal;
+}
+
+.b-fa-map-marker-alt {
+    margin-inline : 1px 0.4em; // Clipped to the left without for some reason
+}
+
+/* Mapbox CSS adaptions */
+
+// Tooltip is misaligned when anchored to bottom (which Mapbox calls 'top')
+.mapboxgl-popup.mapboxgl-popup-anchor-top {
+    margin-top : -1.2em;
+}
+
+.mapboxgl-popup-content {
+    padding    : 1em;
+    box-shadow : 0 1px 3px rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+.mapboxgl-popup-close-button {
+    display : none;
+}
+
+.b-theme-classic-dark {
+    .mapboxgl-popup-content {
+        background : #2b2b2f;
+    }
+
+    .mapboxgl-popup-anchor-top {
+        .mapboxgl-popup-tip {
+            border-bottom-color : #2b2b2f;
+        }
+    }
+    .mapboxgl-popup-anchor-right {
+        .mapboxgl-popup-tip {
+            border-inline-start-color : #2b2b2f;
+        }
+    }
+    .mapboxgl-popup-anchor-bottom {
+        .mapboxgl-popup-tip {
+            border-top-color : #2b2b2f;
+        }
+    }
+    .mapboxgl-popup-anchor-left {
+        .mapboxgl-popup-tip {
+            border-inline-end-color : #2b2b2f;
+        }
+    }
+}
+
+.mapboxgl-popup .event-name {
+    display     : block;
+    margin      : 0 0 1.5em 0;
+    font-size   : 1.4em;
+    font-weight : bold;
+}
+
+.mapboxgl-marker {
+    cursor : pointer;
+}
+
+.mapboxgl-canvas:focus {
+    outline : none !important;
+}
+
+/* EOF Mapbox CSS adaptions */
+
+.address-results .b-list-item i {
+    font-size : 1.5em;
+    margin    : 0 0.7em 0 0.2em;
+}
+
+.address-container {
+    display        : flex;
+    flex-direction : column;
+}
+
+.address-name {
+    flex          : 1;
+    margin-bottom : 0.4em;
+    font-size     : 1.1em;
+}
+
+.lat-long {
+    flex      : 1;
+    color     : #bbb;
+    font-size : 0.9em;
+}
+

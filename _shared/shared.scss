@@ -1,0 +1,35 @@
+@import '../../../Grid/examples/_shared/shared.scss';
+
+// Here are the schedulerpro specific rules below
+.b-schedulerpro {
+  .name {
+    display : flex;
+
+    img {
+      width         : 38px;
+      border-radius : 100%;
+      margin        : 0 15px 0 5px;
+    }
+
+    dl {
+      flex    : 1;
+      margin  : 0;
+      padding : 0;
+    }
+
+    dt {
+      font-weight : bold;
+      color       : #444;
+    }
+
+    dd {
+      font-size : 0.8em;
+      color     : #999;
+      margin    : 4px 0;
+    }
+  }
+}
+
+.b-theme-classic-dark .name dt {
+  color : #eee;
+}
