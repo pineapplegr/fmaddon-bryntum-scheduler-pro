@@ -108,4 +108,5 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
          await scheduler.project.loadInlineData(projectData);
       }
      ```
+   - Add an eventListener to run said function when the DOM is loaded. `document.addEventListener('DOMContentLoaded', initScheduler);
    - Perform `npm run dev` inside a terminal. Now, the app inside the /src path is running in dev mode. It uses the data from /src/data/data.json. In order to view the example, user needs to open the filemaker file that has the addon and set the debug parameter inside the web viewer to 1. By default the parameter is tied to the $$DEBUG variable.
