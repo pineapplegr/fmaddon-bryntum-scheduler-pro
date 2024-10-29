@@ -41,7 +41,7 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
    ### Scheduler-Pro, With added Field via PROPS
    <img width="1075" alt="Screenshot 2024-10-29 at 11 22 20" src="https://github.com/user-attachments/assets/95c7c942-be49-4418-be7b-bc9f06571e39">
    - Added PROPS object
-      ```
+      
          JSONSetElement ( "{}" ; 
             // Default values to show resources as a column
             ["columns[0]" ; JSONSetElement ( "{}" ; 
@@ -65,7 +65,7 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
                ["items" ; JSONSetElement ( "[]" ; [0;"test1";1] ; [1;"test2";1] ) ; 4]
             ); 3]
          )
-      ```
+      
       
   ### Scheduler-Pro Maps Integration(from Bryntum examples)
    <img width="1345" alt="Screenshot 2024-10-29 at 11 24 01" src="https://github.com/user-attachments/assets/1cab5a44-a40c-4109-a025-51b911133416">
@@ -79,7 +79,9 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
       - Inside the repository, we have some examples that can be used inside FileMaker. Copying and pasting the data from the examples folder, to the /src folder and running `npm run dev` will run the example.
    - Add the example files from the example folder to the /src folder in the cloned repository
    - Inside the /src/index.html, remove `../../` and replace with `../`
-   - Inside the src/app.module.js, find the initialisation of the schedulerPro class or extension of said class. eg. `let scheduler = new SchedulerPro({...})`
+   - Inside the src/app.module.js
+      - Remove `../../` from the first import and replace with `../`
+      - find the initialisation of the schedulerPro class or extension of said class. eg. `let scheduler = new SchedulerPro({...})`
    - Enclose the above line inside an async function and add the data parser at the start and the data loader and update listener after. eg. 
      ```
       async function initScheduler() {
