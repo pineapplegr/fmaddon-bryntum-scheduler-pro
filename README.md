@@ -23,7 +23,7 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
    - **propsHandler.js**: 
      - Retrieves SchedulerPro configuration properties from FileMaker for initialization.
 
-### fm-bryntum-driver
+### [fm-bryntum-driver](https://www.npmjs.com/package/@pineapplegr/fm-bryntum-driver)
   - Handles data fetching and updating back to FileMaker.
 
 
@@ -72,6 +72,7 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
 
 ## View more bryntum examples using our template repository
    - Clone the repo
+   - Run `npm install` to fix any issues and add all npm modules required
       - Inside the repository, we have some examples that can be used inside FileMaker. Copying and pasting the data from the examples folder, to the /src folder and running `npm run dev` will run the example.
    - Add the example files from the example folder to the /src folder in the cloned repository
    - Inside the /src/index.html, remove `../../` and replace with `../`
@@ -108,5 +109,10 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
          await scheduler.project.loadInlineData(projectData);
       }
      ```
-   - Add an eventListener to run said function when the DOM is loaded. `document.addEventListener('DOMContentLoaded', initScheduler);
+   - Import the functions we have to use
+     ```
+      import { fetchProjectData, updateProjectData, updatePhantomIds } from '@pineapplegr/fm-bryntum-driver';
+      import getFmProps from '/fm/propsHandler.js';
+     ```
+   - Add an eventListener to run said function when the DOM is loaded. `document.addEventListener('DOMContentLoaded', initScheduler);`
    - Perform `npm run dev` inside a terminal. Now, the app inside the /src path is running in dev mode. It uses the data from /src/data/data.json. In order to view the example, user needs to open the filemaker file that has the addon and set the debug parameter inside the web viewer to 1. By default the parameter is tied to the $$DEBUG variable.
