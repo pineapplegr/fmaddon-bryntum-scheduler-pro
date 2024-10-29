@@ -10,7 +10,7 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
 2. **JavaScript Module**: 
    - Download or update the JavaScript module, which acts as the bridge between FileMaker and SchedulerPro.
      - Our team will provide the complete javascript module used in our demos
-   - The module retrieves data directly from FileMaker, but in development mode, it will use mock data from the local `/data/data.json` file for testing purposes.
+   - The module retrieves data directly from FileMaker, but in development mode, it will use mock data from the environment variable [VITE_FMBRYNTUM_DRIVER_DEV_DATA_PATH](https://www.npmjs.com/package/@pineapplegr/fm-bryntum-driver)
 
 3. **Customizable Props from FileMaker**:
    - The addon allows users to pass properties (props) from FileMaker to the JavaScript module. These props are mapped directly to the **Project object** in Bryntum’s SchedulerPro class. For detailed information on SchedulerPro's Project object, refer to Bryntum's documentation: [SchedulerPro Project](https://bryntum.com/products/schedulerpro/docs/api/widgets/SchedulerPro/view/SchedulerPro).
@@ -35,9 +35,10 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
   - Utility for executing FileMaker scripts as promises, used for data fetching and updates.
 
 ## Examples
- - **Basic Gantt Scheduler**
+   ### Basic Scheduler-Pro project
    <img width="1045" alt="Screenshot 2024-10-29 at 11 22 46" src="https://github.com/user-attachments/assets/9a0dd20b-c39c-4c74-8df8-dd9e789dfad7">
- - **Gantt Scheduler With New Field**
+   
+   ### Scheduler-Pro, With added Field via PROPS
    <img width="1075" alt="Screenshot 2024-10-29 at 11 22 20" src="https://github.com/user-attachments/assets/95c7c942-be49-4418-be7b-bc9f06571e39">
    - Added PROPS object
       ```
@@ -65,12 +66,14 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
             ); 3]
          )
       ```
- - **Maps Integration(from bryntum examples)**
+      
+  ### Scheduler-Pro Maps Integration(from Bryntum examples)
    <img width="1345" alt="Screenshot 2024-10-29 at 11 24 01" src="https://github.com/user-attachments/assets/1cab5a44-a40c-4109-a025-51b911133416">
- - **Flight Dispatch(from bryntum examples)**
+   
+  ### Scheduler-Pro Flight Dispatch(from Bryntum examples)
    <img width="1379" alt="Screenshot 2024-10-29 at 11 24 57" src="https://github.com/user-attachments/assets/a7aff79d-092a-47c7-ab19-acc2427d7e52">
 
-## View more bryntum examples using our template repository
+## View more Bryntum examples using our template repository
    - Clone the repo
    - Run `npm install` to fix any issues and add all npm modules required
       - Inside the repository, we have some examples that can be used inside FileMaker. Copying and pasting the data from the examples folder, to the /src folder and running `npm run dev` will run the example.
@@ -116,3 +119,4 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
      ```
    - Add an eventListener to run said function when the DOM is loaded. `document.addEventListener('DOMContentLoaded', initScheduler);`
    - Perform `npm run dev` inside a terminal. Now, the app inside the /src path is running in dev mode. It uses the data from /src/data/data.json. In order to view the example, user needs to open the filemaker file that has the addon and set the debug parameter inside the web viewer to 1. By default the parameter is tied to the $$DEBUG variable.
+   - Building the app requires the [schedulerPro npm module](https://bryntum.com/products/schedulerpro/docs/guide/SchedulerPro/npm-repository). In order to build the app, the schedulerpro import instance needs to change to the one installed from npm and the app needs to be standalone.
