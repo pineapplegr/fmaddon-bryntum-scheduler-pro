@@ -69,3 +69,43 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
    <img width="1345" alt="Screenshot 2024-10-29 at 11 24 01" src="https://github.com/user-attachments/assets/1cab5a44-a40c-4109-a025-51b911133416">
  - **Flight Dispatch(from bryntum examples)**
    <img width="1379" alt="Screenshot 2024-10-29 at 11 24 57" src="https://github.com/user-attachments/assets/a7aff79d-092a-47c7-ab19-acc2427d7e52">
+
+## View more bryntum examples using our template repository
+   - Clone the repo
+      - Inside the repository, we have some examples that can be used inside FileMaker. Copying and pasting the data from the examples folder, to the /src folder and running `npm run dev` will run the example.
+   - Add the example files from the example folder to the /src folder in the cloned repository
+   - Inside the /src/index.html, remove `../../` and replace with `../`
+   - Inside the src/app.module.js, find the initialisation of the schedulerPro class or extension of said class. eg. `let scheduler = new SchedulerPro({...})`
+   - Enclose the above line inside an async function and add the data parser at the start and the data loader and update listener after. eg. 
+     ```
+      async function initScheduler() {
+         // Get FM Props
+         const props = getFmProps();
+         window._UpdatePhantomIds = updatePhantomIds;
+         const projectData = await fetchProjectData();
+     
+         let scheduler = new SchedulerPro({...})
+
+         // Called for data changes that are persistable
+         scheduler.project.on({
+            hasChanges() {
+            let { changes } = this;
+            
+            // Remove resourceTimeRanges from the changes if it exists
+            if (changes.resourceTimeRanges) {
+            delete changes.resourceTimeRanges;
+            }
+            
+            // If there are other changes left, call updateProjectData
+            if (Object.keys(changes).length > 0) {
+               const response = updateProjectData(changes);
+               this.acceptChanges();
+               }
+            },
+         });
+         
+         // Load the project data
+         await scheduler.project.loadInlineData(projectData);
+      }
+     ```
+   - Perform `npm run dev` inside a terminal. Now, the app inside the /src path is running in dev mode. It uses the data from /src/data/data.json. In order to view the example, user needs to open the filemaker file that has the addon and set the debug parameter inside the web viewer to 1. By default the parameter is tied to the $$DEBUG variable.
