@@ -10,8 +10,7 @@ import {
 } from '../build/schedulerpro.module.js';
 import {
     fetchProjectData,
-    updateProjectData,
-    updatePhantomIds,
+    updateProjectData
 } from '@pineapplegr/fm-bryntum-driver';
 import getFmProps from '/fm/propsHandler.js';
 //region "lib/Drag.js"
@@ -411,7 +410,7 @@ async function initScheduler() {
     // Get FM Props
     const props = getFmProps();
     window._UpdatePhantomIds = updatePhantomIds;
-    const projectData = await fetchProjectData();
+    const projectData = await fetchProjectData({eventsKey: 'sessions',resourcesKey: 'rooms'});
 
     // Displays planned sessions
     const schedule = new Schedule({

@@ -1,7 +1,7 @@
 import { SchedulerPro, EventModel, StringHelper, DateHelper,} from '../build/schedulerpro.module.js';
 
 // Added FMData imports
-import { fetchProjectData, updateProjectData, updatePhantomIds } from '@pineapplegr/fm-bryntum-driver';
+import { fetchProjectData, updateProjectData } from '@pineapplegr/fm-bryntum-driver';
 
 // Import FM Props
 import getFmProps from '/fm/propsHandler.js';
@@ -235,7 +235,6 @@ class MyScheduler extends SchedulerPro {
 async function initializeScheduler() {
     // Get FM Props
     const props = getFmProps();
-    window._UpdatePhantomIds = updatePhantomIds;
     const projectData = await fetchProjectData();
 
     const myScheduler = new MyScheduler({
@@ -250,23 +249,6 @@ async function initializeScheduler() {
                 useRawData: false,
             },
             // loadUrl: 'data/data.json'
-        },
-    });
-    // Called for data changes that are persistable
-    myScheduler.project.on({
-        hasChanges() {
-            let { changes } = this;
-
-            // Remove resourceTimeRanges from the changes if it exists
-            if (changes.resourceTimeRanges) {
-                delete changes.resourceTimeRanges;
-            }
-
-            // If there are other changes left, call updateProjectData
-            if (Object.keys(changes).length > 0) {
-                const response = updateProjectData(changes);
-                this.acceptChanges();
-            }
         },
     });
 

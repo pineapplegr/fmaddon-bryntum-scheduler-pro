@@ -9,7 +9,6 @@ import {
 import {
     fetchProjectData,
     updateProjectData,
-    updatePhantomIds,
 } from '@pineapplegr/fm-bryntum-driver';
 import getFmProps from '/fm/propsHandler.js';
 //region "lib/Aircraft.js"
@@ -439,7 +438,6 @@ class Schedule extends SchedulerPro {
 async function initializeScheduler() {
     // Get FM Props
     const props = getFmProps();
-    window._UpdatePhantomIds = updatePhantomIds;
     const projectData = await fetchProjectData();
 
     const scheduler = new Schedule({
@@ -498,24 +496,6 @@ async function initializeScheduler() {
                     },
                 },
             ],
-        },
-    });
-    
-    // Called for data changes that are persistable
-    scheduler.project.on({
-        hasChanges() {
-            let { changes } = this;
-
-            // Remove resourceTimeRanges from the changes if it exists
-            if (changes.resourceTimeRanges) {
-                delete changes.resourceTimeRanges;
-            }
-
-            // If there are other changes left, call updateProjectData
-            if (Object.keys(changes).length > 0) {
-                const response = updateProjectData(changes);
-                this.acceptChanges();
-            }
         },
     });
 

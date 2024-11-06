@@ -4,8 +4,7 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
 ## **Core Functionality**
 
 1. **Addon Installation**: 
-   - Download the addon from [pineapple.gr](https://pineapple.gr).
-   - Add it to the desired FileMaker solution, enabling SchedulerPro functionality.
+   - To install the addon, simply open the .fmaddon file in FileMaker
 
 2. **JavaScript Module**: 
    - Download or update the JavaScript module, which acts as the bridge between FileMaker and SchedulerPro.
@@ -83,37 +82,37 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
       - Remove `../../` from the first import and replace with `../`
       - find the initialisation of the schedulerPro class or extension of said class. eg. `let scheduler = new SchedulerPro({...})`
    - Enclose the above line inside an async function and add the data parser at the start and the data loader and update listener after. eg. 
-     ```
+     ```javascript
       async function initScheduler() {
          // Get FM Props
          const props = getFmProps();
          window._UpdatePhantomIds = updatePhantomIds;
-         const projectData = await fetchProjectData();
+         const projectData = await fetchProjectData(...);
      
          let scheduler = new SchedulerPro({...})
 
-         // Called for data changes that are persistable
-         scheduler.project.on({
-            hasChanges() {
-            let { changes } = this;
-            
-            // Remove resourceTimeRanges from the changes if it exists
-            if (changes.resourceTimeRanges) {
-            delete changes.resourceTimeRanges;
-            }
-            
-            // If there are other changes left, call updateProjectData
-            if (Object.keys(changes).length > 0) {
-               const response = updateProjectData(changes);
-               this.acceptChanges();
-               }
-            },
-         });
-         
          // Load the project data
          await scheduler.project.loadInlineData(projectData);
       }
      ```
+     - If there the dataStoreKeys are different than the default, please make sure to update the map inside the fetchProjectData function e.g.
+      ```javascript
+      const customDataStore = {
+         eventsKey: 'customEvents',
+         resourcesKey: 'customResources',
+         assignmentsKey: 'customAssignments',
+         dependenciesKey: 'customDependencies'
+      };
+      const projectData = await fetchProjectData(customDataStore);
+
+      // default values for dataStoreKeys, if this is the data structure there is no need to add a custom dataStore
+      {
+         eventsKey: 'events',
+         resourcesKey: 'resources',
+         assignmentsKey: 'assignments',
+         dependenciesKey: 'dependencies'
+      }
+      
    - Import the functions we have to use
      ```
       import { fetchProjectData, updateProjectData, updatePhantomIds } from '@pineapplegr/fm-bryntum-driver';

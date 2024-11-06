@@ -1,5 +1,5 @@
 import { DateHelper, SchedulerPro, StringHelper, EditorTab, Toast, EventModel } from '../build/schedulerpro.module.js';
-import { fetchProjectData, updateProjectData, updatePhantomIds } from '@pineapplegr/fm-bryntum-driver'
+import { fetchProjectData, updateProjectData } from '@pineapplegr/fm-bryntum-driver'
 import getFmProps from '/fm/propsHandler.js';
 //region "lib/SchedulerWithSubtasks.js"
 
@@ -290,7 +290,6 @@ let scheduler;
 async function createScheduler(mode) {
     // Get FM Props
     const props = getFmProps();
-    window._UpdatePhantomIds = updatePhantomIds;
     const projectData = await fetchProjectData();
 
     const isHorizontal = mode === 'horizontal';
@@ -331,24 +330,6 @@ async function createScheduler(mode) {
                 }
             }
         ]
-    });
-
-    // Called for data changes that are persistable
-    scheduler.project.on({
-        hasChanges() {
-            let { changes } = this;
-
-            // Remove resourceTimeRanges from the changes if it exists
-            if (changes.resourceTimeRanges) {
-                delete changes.resourceTimeRanges;
-            }
-
-            // If there are other changes left, call updateProjectData
-            if (Object.keys(changes).length > 0) {
-                const response = updateProjectData(changes);
-                this.acceptChanges();
-            }
-        },
     });
 
     // Load the project data

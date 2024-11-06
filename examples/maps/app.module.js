@@ -2,7 +2,7 @@ import { Model, Combo, Panel, GlobalEvents, DomHelper, StringHelper, DateHelper,
 import shared from '../_shared/shared.module.js';
 
 // Added FMData imports
-import { fetchProjectData, updateProjectData, updatePhantomIds } from '@pineapplegr/fm-bryntum-driver';
+import { fetchProjectData, updateProjectData } from '@pineapplegr/fm-bryntum-driver';
 
 // Import FM Props
 import getFmProps from '/fm/propsHandler.js';
@@ -550,7 +550,6 @@ const detectWebGL = () => {
 async function initFunction() {
     // Get FM Props
     const props = getFmProps();
-    window._UpdatePhantomIds = updatePhantomIds;
     const projectData = await fetchProjectData();
 
     let mapPanel;
@@ -637,24 +636,6 @@ async function initFunction() {
             timeout : 0
         });
     }
-
-    // Called for data changes that are persistable
-    schedule.project.on({
-        hasChanges() {
-            let { changes } = this;
-
-            // Remove resourceTimeRanges from the changes if it exists
-            if (changes.resourceTimeRanges) {
-                delete changes.resourceTimeRanges;
-            }
-
-            // If there are other changes left, call updateProjectData
-            if (Object.keys(changes).length > 0) {
-                const response = updateProjectData(changes);
-                this.acceptChanges();
-            }
-        },
-    });
 
     // Load the project data
     await schedule.project.loadInlineData(projectData);

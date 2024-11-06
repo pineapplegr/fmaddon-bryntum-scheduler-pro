@@ -10,8 +10,47 @@
       {
         "id"      : 2,
         "name"    : "Office #1",
-        "iconCls" : "b-fa b-fa-building",
-        "url"     : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbuffer.com%2Flibrary%2Ffree-images%2F&psig=AOvVaw08PPbyZ7ywJbQuLf6ItdnO&ust=1729084051554000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDyh5e6kIkDFQAAAAAdAAAAABAE"
+        "iconCls" : "b-fa b-fa-building"
+      },
+      {
+        "id"      : 3,
+        "name"    : "Office #2",
+        "iconCls" : "b-fa b-fa-building"
+      },
+      {
+        "id"      : 4,
+        "name"    : "Factory #1",
+        "iconCls" : "b-fa b-fa-industry"
+      },
+      {
+        "id"      : 5,
+        "name"    : "Factory #2",
+        "iconCls" : "b-fa b-fa-industry"
+      },
+      {
+        "id"      : 6,
+        "name"    : "Factory #3",
+        "iconCls" : "b-fa b-fa-building"
+      },
+      {
+        "id"      : 7,
+        "name"    : "Warehouse #1",
+        "iconCls" : "b-fa b-fa-warehouse"
+      },
+      {
+        "id"      : 8,
+        "name"    : "Warehouse #2",
+        "iconCls" : "b-fa b-fa-warehouse"
+      },
+      {
+        "id"      : 9,
+        "name"    : "Store #1",
+        "iconCls" : "b-fa b-fa-store"
+      },
+      {
+        "id"      : 10,
+        "name"    : "Store #2",
+        "iconCls" : "b-fa b-fa-store"
       }
     ]
   },
@@ -32,6 +71,110 @@
         "plannedEndDate"   : "2024-03-11T12:00",
         "actualStartDate"  : "2024-03-11T10:15",
         "actualEndDate"    : "2024-03-11T12:30"
+      },
+      {
+        "id"               : 3,
+        "name"             : "Steel Structure Assembly",
+        "plannedStartDate" : "2024-03-11T13:00",
+        "plannedEndDate"   : "2024-03-11T15:00",
+        "actualStartDate"  : "2024-03-11T13:30",
+        "actualEndDate"    : "2024-03-11T15:30"
+      },
+      {
+        "id"               : 4,
+        "name"             : "Electrical Wiring",
+        "plannedStartDate" : "2024-03-11T16:00",
+        "plannedEndDate"   : "2024-03-11T18:00",
+        "actualStartDate"  : "2024-03-11T16:15",
+        "actualEndDate"    : "2024-03-11T18:30"
+      },
+      {
+        "id"               : 5,
+        "name"             : "Roof Installation",
+        "plannedStartDate" : "2024-03-11T19:00",
+        "plannedEndDate"   : "2024-03-11T21:00",
+        "actualStartDate"  : "2024-03-11T19:15",
+        "actualEndDate"    : "2024-03-11T21:30"
+      },
+      {
+        "id"               : 6,
+        "name"             : "Painting",
+        "plannedStartDate" : "2024-03-11T22:00",
+        "plannedEndDate"   : "2024-03-11T23:00",
+        "actualStartDate"  : "2024-03-11T22:15",
+        "actualEndDate"    : "2024-03-11T23:30"
+      },
+      {
+        "id"               : 7,
+        "name"             : "Interior Finishing",
+        "plannedStartDate" : "2024-03-11T13:45",
+        "plannedEndDate"   : "2024-03-11T15:45",
+        "actualStartDate"  : "2024-03-11T11:00",
+        "actualEndDate"    : "2024-03-11T12:00"
+      },
+      {
+        "id"               : 8,
+        "name"             : "Paving",
+        "plannedStartDate" : "2024-03-11T03:00",
+        "plannedEndDate"   : "2024-03-11T05:00",
+        "actualStartDate"  : "2024-03-11T03:15",
+        "actualEndDate"    : "2024-03-11T05:30"
+      },
+      {
+        "id"               : 9,
+        "name"             : "Landscaping",
+        "plannedStartDate" : "2024-03-11T06:00",
+        "plannedEndDate"   : "2024-03-11T08:00",
+        "actualStartDate"  : "2024-03-11T06:15",
+        "actualEndDate"    : "2024-03-11T08:30"
+      },
+      {
+        "id"               : 10,
+        "name"             : "Final Inspection",
+        "plannedStartDate" : "2024-03-11T09:00",
+        "plannedEndDate"   : "2024-03-11T10:30",
+        "actualStartDate"  : "2024-03-11T09:15",
+        "actualEndDate"    : "2024-03-11T11:00"
+      },
+      {
+        "id"               : 11,
+        "name"             : "HVAC Installation",
+        "plannedStartDate" : "2024-03-11T11:30",
+        "plannedEndDate"   : "2024-03-11T13:30",
+        "actualStartDate"  : "2024-03-11T11:45",
+        "actualEndDate"    : "2024-03-11T14:00"
+      },
+      {
+        "id"               : 12,
+        "name"             : "Window Installation",
+        "plannedStartDate" : "2024-03-11T14:30",
+        "plannedEndDate"   : "2024-03-11T16:30",
+        "actualStartDate"  : "2024-03-11T14:45",
+        "actualEndDate"    : "2024-03-11T17:00"
+      },
+      {
+        "id"               : 13,
+        "name"             : "Flooring",
+        "plannedStartDate" : "2024-03-11T17:45",
+        "plannedEndDate"   : "2024-03-11T19:45",
+        "actualStartDate"  : "2024-03-11T18:00",
+        "actualEndDate"    : "2024-03-11T20:00"
+      },
+      {
+        "id"               : 14,
+        "name"             : "Security System Installation",
+        "plannedStartDate" : "2024-03-11T20:30",
+        "plannedEndDate"   : "2024-03-11T22:30",
+        "actualStartDate"  : "2024-03-11T20:45",
+        "actualEndDate"    : "2024-03-11T23:00"
+      },
+      {
+        "id"               : 15,
+        "name"             : "Final Cleanup",
+        "plannedStartDate" : "2024-03-11T23:30",
+        "plannedEndDate"   : "2024-03-13T01:30",
+        "actualStartDate"  : "2024-03-11T23:45",
+        "actualEndDate"    : "2024-03-13T02:00"
       }
     ]
   },
@@ -46,15 +189,66 @@
         "id"       : 2,
         "event"    : 2,
         "resource" : 2
-      }
-    ]
-  },
-  "dependencies" : {
-    "rows" : [
+      },
       {
-        "id"        : 1,
-        "fromEvent" : 1,
-        "toEvent"   : 2
+        "id"       : 3,
+        "event"    : 3,
+        "resource" : 3
+      },
+      {
+        "id"       : 4,
+        "event"    : 4,
+        "resource" : 4
+      },
+      {
+        "id"       : 5,
+        "event"    : 5,
+        "resource" : 5
+      },
+      {
+        "id"       : 6,
+        "event"    : 6,
+        "resource" : 6
+      },
+      {
+        "id"       : 7,
+        "event"    : 7,
+        "resource" : 6
+      },
+      {
+        "id"       : 8,
+        "event"    : 8,
+        "resource" : 5
+      },
+      {
+        "id"       : 9,
+        "event"    : 9,
+        "resource" : 7
+      },
+      {
+        "id"       : 10,
+        "event"    : 9,
+        "resource" : 8
+      },
+      {
+        "id"       : 11,
+        "event"    : 10,
+        "resource" : 9
+      },
+      {
+        "id"       : 12,
+        "event"    : 11,
+        "resource" : 9
+      },
+      {
+        "id"       : 13,
+        "event"    : 12,
+        "resource" : 10
+      },
+      {
+        "id"       : 14,
+        "event"    : 13,
+        "resource" : 8
       }
     ]
   }

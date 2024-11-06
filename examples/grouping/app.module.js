@@ -1,5 +1,5 @@
 import { Toast, SchedulerPro } from '../build/schedulerpro.module.js';
-import { updateProjectData, fetchProjectData, updatePhantomIds } from '@pineapplegr/fm-bryntum-driver';
+import { updateProjectData, fetchProjectData } from '@pineapplegr/fm-bryntum-driver';
 import getFmProps from '/fm/propsHandler.js';
 
 async function initializeScheduler() {
@@ -125,26 +125,7 @@ async function initializeScheduler() {
 
     // Get FM Props
     const props = getFmProps();
-    window._UpdatePhantomIds = updatePhantomIds;
     const projectData = await fetchProjectData();
-
-    // Called for data changes that are persistable
-    schedulerPro.project.on({
-        hasChanges() {
-            let { changes } = this;
-
-            // Remove resourceTimeRanges from the changes if it exists
-            if (changes.resourceTimeRanges) {
-                delete changes.resourceTimeRanges;
-            }
-
-            // If there are other changes left, call updateProjectData
-            if (Object.keys(changes).length > 0) {
-                const response = updateProjectData(changes);
-                this.acceptChanges();
-            }
-        },
-    });
 
     // Load the project data
     await schedulerPro.project.loadInlineData(projectData);
