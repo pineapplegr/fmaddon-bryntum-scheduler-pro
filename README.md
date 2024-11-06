@@ -35,10 +35,11 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
 
 ## Examples
    ### Basic Scheduler-Pro project
-   <img width="1045" alt="Screenshot 2024-10-29 at 11 22 46" src="https://github.com/user-attachments/assets/9a0dd20b-c39c-4c74-8df8-dd9e789dfad7">
+   <img width="1022" alt="basic" src="https://github.com/user-attachments/assets/8bd112cd-68c1-4428-8630-a6c9a1371a0d">
    
    ### Scheduler-Pro, With added Field via PROPS
-   <img width="1075" alt="Screenshot 2024-10-29 at 11 22 20" src="https://github.com/user-attachments/assets/95c7c942-be49-4418-be7b-bc9f06571e39">
+   <img width="1021" alt="basic-with-props" src="https://github.com/user-attachments/assets/15a55121-4557-4495-babe-97cab08a08ef">
+
    - Added PROPS object
       
          JSONSetElement ( "{}" ; 
@@ -67,10 +68,14 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
       
       
   ### Scheduler-Pro Maps Integration(from Bryntum examples)
-   <img width="1345" alt="Screenshot 2024-10-29 at 11 24 01" src="https://github.com/user-attachments/assets/1cab5a44-a40c-4109-a025-51b911133416">
+   <img width="1576" alt="maps" src="https://github.com/user-attachments/assets/52613370-7f43-4fe7-9cb3-16bbafdc165d">
+
    
   ### Scheduler-Pro Flight Dispatch(from Bryntum examples)
-   <img width="1379" alt="Screenshot 2024-10-29 at 11 24 57" src="https://github.com/user-attachments/assets/a7aff79d-092a-47c7-ab19-acc2427d7e52">
+   <img width="1577" alt="flight-dispatch" src="https://github.com/user-attachments/assets/71343147-af4e-49a9-91a8-a69e13c143c1">
+
+  ### Scheduler-Pro Drag from grid(from Bryntum examples)
+  <img width="1571" alt="grid" src="https://github.com/user-attachments/assets/34a85b1b-9a31-4860-9f5c-8b7d79e24de5">
 
 ## View more Bryntum examples using our template repository
    - Clone the repo
@@ -114,10 +119,10 @@ This add-on integrates **Bryntum's** [**SchedulerPro**](https://bryntum.com/prod
       }
       
    - Import the functions we have to use
-     ```
+     ```javascript
       import { fetchProjectData, updateProjectData, updatePhantomIds } from '@pineapplegr/fm-bryntum-driver';
       import getFmProps from '/fm/propsHandler.js';
-     ```
+     
    - Add an eventListener to run said function when the DOM is loaded. `document.addEventListener('DOMContentLoaded', initScheduler);`
    - Perform `npm run dev` inside a terminal. Now, the app inside the /src path is running in dev mode. It uses the data from /src/data/data.json. In order to view the example, user needs to open the filemaker file that has the addon and set the debug parameter inside the web viewer to 1. By default the parameter is tied to the $$DEBUG variable.
    - Building the app requires the [schedulerPro npm module](https://bryntum.com/products/schedulerpro/docs/guide/SchedulerPro/npm-repository). In order to build the app, the schedulerpro import instance needs to change to the one installed from npm and the app needs to be standalone.
