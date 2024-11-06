@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.8",
-    "@pineapplegr/fm-bryntum-driver": "^1.0.0",
+    "@pineapplegr/fm-bryntum-driver": "^1.1.4",
     "fm-gofer": "^1.10.0",
     "fm-mock": "^1.5.0"
   }
